@@ -1,0 +1,34 @@
+[0.006s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/odom_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/odom_visualization -- -j20 -l20
+[0.044s] [ 50%] Built target odom_visualization_plate
+[0.056s] [ 75%] Building CXX object CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o
+[9.251s] [100%] Linking CXX executable odom_visualization
+[9.372s] [100%] Built target odom_visualization
+[9.381s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/odom_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/odom_visualization -- -j20 -l20
+[9.382s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/odom_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/odom_visualization
+[9.387s] -- Install configuration: "Release"
+[9.387s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/lib/odom_visualization/odom_visualization
+[9.388s] -- Set runtime path of "/home/xingmaker/landing/Fast-Perching/install/odom_visualization/lib/odom_visualization/odom_visualization" to ""
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/lib/odom_visualization/odom_visualization_plate
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch/vins_vis.launch
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch/sim_vis.launch
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch/real_vis.launch
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/meshes
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/meshes/f250.dae
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/meshes/hummingbird.mesh
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/ament_index/resource_index/package_run_dependencies/odom_visualization
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/ament_index/resource_index/parent_prefix_path/odom_visualization
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/ament_prefix_path.sh
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/ament_prefix_path.dsv
+[9.388s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/path.sh
+[9.389s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/path.dsv
+[9.389s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.bash
+[9.389s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.sh
+[9.389s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.zsh
+[9.389s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.dsv
+[9.389s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/package.dsv
+[9.390s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/ament_index/resource_index/packages/odom_visualization
+[9.390s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/cmake/odom_visualizationConfig.cmake
+[9.390s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/cmake/odom_visualizationConfig-version.cmake
+[9.390s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/package.xml
+[9.390s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/odom_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/odom_visualization

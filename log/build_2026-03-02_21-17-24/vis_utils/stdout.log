@@ -1,0 +1,21 @@
+-- Install configuration: "Release"
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/include
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/include/vis_utils
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/include/vis_utils/vis_utils.hpp
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/ament_index/resource_index/package_run_dependencies/vis_utils
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/ament_index/resource_index/parent_prefix_path/vis_utils
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/ament_prefix_path.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/ament_prefix_path.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/path.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/path.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.bash
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.zsh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/package.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/ament_index/resource_index/packages/vis_utils
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/vis_utilsConfig.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/vis_utilsConfig-version.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/package.xml

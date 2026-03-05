@@ -1,0 +1,12 @@
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp: In function ‘void odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)’:
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp:22:10: warning: unused variable ‘dx’ [-Wunused-variable]
+   22 |   double dx = height_ / 2;
+      |          ^~
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp:23:10: warning: unused variable ‘dy’ [-Wunused-variable]
+   23 |   double dy = width_ / 2;
+      |          ^~
+/usr/bin/ld: 找不到 -ln: 没有那个文件或目录
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/odom_visualization_plate.dir/build.make:222：odom_visualization_plate] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/odom_visualization_plate.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

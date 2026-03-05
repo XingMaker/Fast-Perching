@@ -1,0 +1,37 @@
+-- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+-- Found tf2: 0.25.19 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_ros: 0.25.19 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Found pose_utils: 0.0.0 (/home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/cmake)
+-- Found Armadillo: /usr/include (found version "10.8.2") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/xingmaker/landing/Fast-Perching/build/odom_visualization
+Consolidate compiler generated dependencies of target odom_visualization
+[ 25%] Building CXX object CMakeFiles/odom_visualization_plate.dir/src/odom_visualization_plate.cpp.o
+[ 50%] Linking CXX executable odom_visualization
+[ 75%] Built target odom_visualization
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp: In function ‘void odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)’:
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp:22:10: warning: unused variable ‘dx’ [-Wunused-variable]
+   22 |   double dx = height_ / 2;
+      |          ^~
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp:23:10: warning: unused variable ‘dy’ [-Wunused-variable]
+   23 |   double dy = width_ / 2;
+      |          ^~
+[100%] Linking CXX executable odom_visualization_plate
+/usr/bin/ld: 找不到 -ln: 没有那个文件或目录
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/odom_visualization_plate.dir/build.make:222：odom_visualization_plate] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/odom_visualization_plate.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

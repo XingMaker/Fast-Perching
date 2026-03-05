@@ -1,0 +1,35 @@
+[0.006s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/traj_opt': CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/planning:/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/odom_visualization:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/traj_opt -- -j20 -l20
+[0.040s] Consolidate compiler generated dependencies of target traj_opt
+[0.053s] [100%] Built target traj_opt
+[0.059s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/traj_opt' returned '0': CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/planning:/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/odom_visualization:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/traj_opt -- -j20 -l20
+[0.060s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/traj_opt': CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/planning:/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/odom_visualization:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/traj_opt
+[0.064s] -- Install configuration: "Release"
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt/root_finder.hpp
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt/poly_traj_utils.hpp
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt/minco.hpp
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt/traj_opt.h
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt/lbfgs_raw.hpp
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/lib/libtraj_opt.so
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/library_path.sh
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/library_path.dsv
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/ament_index/resource_index/package_run_dependencies/traj_opt
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/ament_index/resource_index/parent_prefix_path/traj_opt
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/ament_prefix_path.sh
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/ament_prefix_path.dsv
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/path.sh
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/path.dsv
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/local_setup.bash
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/local_setup.sh
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/local_setup.zsh
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/local_setup.dsv
+[0.065s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/package.dsv
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/ament_index/resource_index/packages/traj_opt
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake/ament_cmake_export_libraries-extras.cmake
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake/traj_optConfig.cmake
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake/traj_optConfig-version.cmake
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/package.xml
+[0.065s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/traj_opt' returned '0': CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/planning:/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/odom_visualization:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/traj_opt

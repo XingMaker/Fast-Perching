@@ -1,0 +1,34 @@
+[ 25%] Building CXX object CMakeFiles/odom_visualization_plate.dir/src/odom_visualization_plate.cpp.o
+[ 75%] Built target odom_visualization
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp: In function ‘void odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)’:
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp:22:10: warning: unused variable ‘dx’ [-Wunused-variable]
+   22 |   double dx = height_ / 2;
+      |          ^~
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp:23:10: warning: unused variable ‘dy’ [-Wunused-variable]
+   23 |   double dy = width_ / 2;
+      |          ^~
+[100%] Linking CXX executable odom_visualization_plate
+[100%] Built target odom_visualization_plate
+-- Install configuration: "Release"
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/lib/odom_visualization/odom_visualization
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/lib/odom_visualization/odom_visualization_plate
+-- Set runtime path of "/home/xingmaker/landing/Fast-Perching/install/odom_visualization/lib/odom_visualization/odom_visualization_plate" to ""
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch/vins_vis.launch
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch/sim_vis.launch
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch/real_vis.launch
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/ament_index/resource_index/package_run_dependencies/odom_visualization
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/ament_index/resource_index/parent_prefix_path/odom_visualization
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/ament_prefix_path.sh
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/path.sh
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/path.dsv
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.bash
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.sh
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.zsh
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/package.dsv
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/ament_index/resource_index/packages/odom_visualization
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/cmake/odom_visualizationConfig.cmake
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/cmake/odom_visualizationConfig-version.cmake
+-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/package.xml

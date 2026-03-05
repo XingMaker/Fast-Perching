@@ -1,0 +1,1 @@
+Invoking command in '/home/xingmaker/landing/Fast-Perching/build/odom_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization -DCMAKE_INSTALL_PREFIX=/home/xingmaker/landing/Fast-Perching/install/odom_visualization

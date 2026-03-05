@@ -1,0 +1,7 @@
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp: In function ‘void odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)’:
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp:22:10: warning: unused variable ‘dx’ [-Wunused-variable]
+   22 |   double dx = height_ / 2;
+      |          ^~
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp:23:10: warning: unused variable ‘dy’ [-Wunused-variable]
+   23 |   double dy = width_ / 2;
+      |          ^~

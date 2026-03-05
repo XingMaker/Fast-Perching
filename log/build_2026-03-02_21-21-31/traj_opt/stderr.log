@@ -1,0 +1,8 @@
+In file included from /home/xingmaker/landing/Fast-Perching/src/traj_opt/src/traj_opt_perching.cc:1:
+/home/xingmaker/landing/Fast-Perching/src/traj_opt/include/traj_opt/traj_opt.h:6:10: fatal error: vis_utils/vis_utils.hpp: 没有那个文件或目录
+    6 | #include <vis_utils/vis_utils.hpp>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [CMakeFiles/traj_opt.dir/build.make:76：CMakeFiles/traj_opt.dir/src/traj_opt_perching.cc.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/traj_opt.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

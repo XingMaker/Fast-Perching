@@ -1,0 +1,27 @@
+[35m[1mConsolidate compiler generated dependencies of target pose_utils[0m
+[100%] Built target pose_utils
+-- Install configuration: "Release"
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/include
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/include/pose_utils.h
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/lib/libpose_utils.so
+-- Set runtime path of "/home/xingmaker/landing/Fast-Perching/install/pose_utils/lib/libpose_utils.so" to ""
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/environment/library_path.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/environment/library_path.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/ament_index/resource_index/package_run_dependencies/pose_utils
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/ament_index/resource_index/parent_prefix_path/pose_utils
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/environment/ament_prefix_path.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/environment/ament_prefix_path.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/environment/path.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/environment/path.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/local_setup.bash
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/local_setup.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/local_setup.zsh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/local_setup.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/package.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/ament_index/resource_index/packages/pose_utils
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/cmake/pose_utilsConfig.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/cmake/pose_utilsConfig-version.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/pose_utils/share/pose_utils/package.xml

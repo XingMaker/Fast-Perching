@@ -1,8 +1,11 @@
-rostopic pub /triger geometry_msgs/PoseStamped "header:
-  seq: 0
+#!/bin/bash
+
+# ROS2 version of pub_triger.sh
+
+ros2 topic pub /drone0/triger geometry_msgs/msg/PoseStamped "header:
   stamp:
-    secs: 0
-    nsecs: 0
+    sec: 0
+    nanosec: 0
   frame_id: ''
 pose:
   position:
@@ -13,4 +16,4 @@ pose:
     x: 0.0
     y: 0.0
     z: 0.0
-    w: 0.0"
+    w: 0.0" --once

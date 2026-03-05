@@ -1,57 +1,66 @@
-
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.8)
 project(odom_visualization)
 
-find_package(Eigen3 REQUIRED)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall")
 
-find_package(catkin REQUIRED COMPONENTS
-  roscpp
+# Find dependencies
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(pose_utils REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(Armadillo REQUIRED)
+
+# Create executable nodes
+add_executable(${PROJECT_NAME} src/odom_visualization.cpp)
+
+ament_target_dependencies(${PROJECT_NAME}
+  rclcpp
   sensor_msgs
   nav_msgs
   visualization_msgs
-  tf
+  geometry_msgs
+  tf2
+  tf2_ros
   pose_utils
-  Eigen3 REQUIRED
+  Eigen3
 )
 
-
-catkin_package(
- INCLUDE_DIRS 
- LIBRARIES 
- DEPENDS OpenCV Eigen Boost
-
-#  DEPENDS system_lib
+target_link_libraries(${PROJECT_NAME}
+  ${ARMADILLO_LIBRARIES}
 )
 
-find_package(Armadillo REQUIRED)
-include_directories(${ARMADILLO_INCLUDE_DIRS})
+add_executable(${PROJECT_NAME}_plate src/odom_visualization_plate.cpp)
 
-
-include_directories(include)
-include_directories(
-  ${catkin_INCLUDE_DIRS}
-  ${Eigen_INCLUDE_DIRS}
-  ${Eigen3_INCLUDE_DIRS} 
+ament_target_dependencies(${PROJECT_NAME}_plate
+  rclcpp
+  sensor_msgs
+  nav_msgs
+  visualization_msgs
+  geometry_msgs
+  tf2
+  tf2_ros
+  Eigen3
 )
 
-add_executable(odom_visualization src/odom_visualization.cpp)
-
-target_link_libraries(odom_visualization
-   ${catkin_LIBRARIES}
-   ${ARMADILLO_LIBRARIES}
-   pose_utils
+target_link_libraries(${PROJECT_NAME}_plate
+  ${ARMADILLO_LIBRARIES}
 )
 
-add_dependencies(odom_visualization
-  ${catkin_EXPORTED_TARGETS}
+install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_plate
+  DESTINATION lib/${PROJECT_NAME}
 )
 
-add_executable(odom_visualization_plate src/odom_visualization_plate.cpp)
-
-target_link_libraries(odom_visualization_plate
-   ${catkin_LIBRARIES}
+install(DIRECTORY launch meshes
+  DESTINATION share/${PROJECT_NAME}
 )
 
-add_dependencies(odom_visualization_plate
-  ${catkin_EXPORTED_TARGETS}
-)
+ament_package()

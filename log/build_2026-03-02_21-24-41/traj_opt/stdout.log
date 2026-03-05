@@ -1,0 +1,32 @@
+Consolidate compiler generated dependencies of target traj_opt
+[100%] Built target traj_opt
+-- Install configuration: "Release"
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt/root_finder.hpp
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt/poly_traj_utils.hpp
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt/minco.hpp
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt/traj_opt.h
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/include/traj_opt/lbfgs_raw.hpp
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/lib/libtraj_opt.so
+-- Set runtime path of "/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib/libtraj_opt.so" to ""
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/library_path.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/library_path.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/ament_index/resource_index/package_run_dependencies/traj_opt
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/ament_index/resource_index/parent_prefix_path/traj_opt
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/ament_prefix_path.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/ament_prefix_path.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/path.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/environment/path.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/local_setup.bash
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/local_setup.sh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/local_setup.zsh
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/local_setup.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/package.dsv
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/ament_index/resource_index/packages/traj_opt
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake/traj_optConfig.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake/traj_optConfig-version.cmake
+-- Installing: /home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/package.xml

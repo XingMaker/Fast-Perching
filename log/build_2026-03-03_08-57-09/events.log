@@ -1,0 +1,239 @@
+[0.000000] (-) TimerEvent: {}
+[0.000248] (-) JobUnselected: {'identifier': 'odom_visualization'}
+[0.000332] (-) JobUnselected: {'identifier': 'pose_utils'}
+[0.000522] (-) JobUnselected: {'identifier': 'traj_opt'}
+[0.000546] (vis_utils) JobQueued: {'identifier': 'vis_utils', 'dependencies': OrderedDict()}
+[0.000556] (planning) JobQueued: {'identifier': 'planning', 'dependencies': OrderedDict([('vis_utils', '/home/xingmaker/landing/Fast-Perching/install/vis_utils'), ('traj_opt', '/home/xingmaker/landing/Fast-Perching/install/traj_opt')])}
+[0.000567] (vis_utils) JobStarted: {'identifier': 'vis_utils'}
+[0.004567] (vis_utils) JobProgress: {'identifier': 'vis_utils', 'progress': 'cmake'}
+[0.005179] (vis_utils) JobProgress: {'identifier': 'vis_utils', 'progress': 'build'}
+[0.005832] (vis_utils) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xingmaker/landing/Fast-Perching/build/vis_utils', '--', '-j20', '-l20'], 'cwd': '/home/xingmaker/landing/Fast-Perching/build/vis_utils', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/xingmaker/vrx_ws/install/lib:/home/xingmaker/project_px4_landing/src/PX4-Autopilot/build/px4_sitl_default/src/modules/simulation/gz_plugins'), ('ANTHROPIC_MODEL', 'kimi-k2.5'), ('USER', 'xingmaker'), ('LANGUAGE', 'zh_CN:en'), ('LC_TIME', 'zh_CN.UTF-8'), ('GZ_SIM_RESOURCE_PATH', '/home/xingmaker/vrx_ws/install/share/wamv_description/models:/home/xingmaker/vrx_ws/install/share/vrx_gz/models/tmp:/home/xingmaker/vrx_ws/install/share/vrx_gz/models:/home/xingmaker/vrx_ws/install/share/vrx_gz/worlds/2023_practice:/home/xingmaker/vrx_ws/install/share/vrx_gz/worlds:/home/xingmaker/vrx_ws/install/share/vrx_gazebo/models:/home/xingmaker/vrx_ws/install/share/:/home/xingmaker/project_px4_landing/src/PX4-Autopilot/Tools/simulation/gz/models'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '2'), ('ISAACSIM_PATH', '/home/xingmaker/isaac'), ('LD_LIBRARY_PATH', '/home/xingmaker/landing/Fast-Perching/install/pose_utils/lib:/home/xingmaker/vrx_ws/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xingmaker'), ('OLDPWD', '/home/xingmaker/landing/Fast-Perching'), ('LESS', '-R'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ZSH', '/home/xingmaker/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('MANAGERPID', '2000'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('SYSTEMD_EXEC_PID', '2236'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5840'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install:/home/xingmaker/vrx_ws/install'), ('LOGNAME', 'xingmaker'), ('GTK_IM_MODULE', 'fcitx'), ('JOURNAL_STREAM', '8:15801'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ANTHROPIC_BASE_URL', 'https://coding.dashscope.aliyuncs.com/apps/anthropic'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('AUTOJUMP_ERROR_PATH', '/home/xingmaker/.local/share/autojump/errors.log'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/xingmaker/.npm-global/bin:/opt/ros/humble/bin:/home/xingmaker/anaconda3/condabin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/xingmaker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('INVOCATION_ID', 'c2c49c24927b4ba59ff5c6bde18572cd'), ('SESSION_MANAGER', 'local/xingmaker:@/tmp/.ICE-unix/2208,unix/xingmaker:/tmp/.ICE-unix/2208'), ('GDM_LANG', 'zh_CN'), ('PAPERSIZE', 'a4'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_MENU_PREFIX', 'gnome-'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('DISPLAY', ':0'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('IBUS_DISABLE_SNOOPER', '1'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('XAUTHORITY', '/home/xingmaker/.Xauthority'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=fcitx'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/xingmaker'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/xingmaker/anaconda3/bin/python'), ('AMENT_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble'), ('TERMINATOR_UUID', 'urn:uuid:919709a8-3262-4cb7-b085-b6a5e8374c33'), ('LC_NAME', 'zh_CN.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('ANTHROPIC_AUTH_TOKEN', 'sk-sp-c47a899b2fd645c5bc0d4c51d595d86e'), ('GDMSESSION', 'ubuntu'), ('QT_ACCESSIBILITY', '1'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('CLAUDECODE', '1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/xingmaker/landing/Fast-Perching/build/vis_utils'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/xingmaker/anaconda3/bin/conda'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('AUTOJUMP_SOURCED', '1'), ('PYTHONPATH', '/home/xingmaker/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble')]), 'shell': False}
+[0.036487] (vis_utils) CommandEnded: {'returncode': 0}
+[0.037380] (vis_utils) JobProgress: {'identifier': 'vis_utils', 'progress': 'install'}
+[0.051340] (vis_utils) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/xingmaker/landing/Fast-Perching/build/vis_utils'], 'cwd': '/home/xingmaker/landing/Fast-Perching/build/vis_utils', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/xingmaker/vrx_ws/install/lib:/home/xingmaker/project_px4_landing/src/PX4-Autopilot/build/px4_sitl_default/src/modules/simulation/gz_plugins'), ('ANTHROPIC_MODEL', 'kimi-k2.5'), ('USER', 'xingmaker'), ('LANGUAGE', 'zh_CN:en'), ('LC_TIME', 'zh_CN.UTF-8'), ('GZ_SIM_RESOURCE_PATH', '/home/xingmaker/vrx_ws/install/share/wamv_description/models:/home/xingmaker/vrx_ws/install/share/vrx_gz/models/tmp:/home/xingmaker/vrx_ws/install/share/vrx_gz/models:/home/xingmaker/vrx_ws/install/share/vrx_gz/worlds/2023_practice:/home/xingmaker/vrx_ws/install/share/vrx_gz/worlds:/home/xingmaker/vrx_ws/install/share/vrx_gazebo/models:/home/xingmaker/vrx_ws/install/share/:/home/xingmaker/project_px4_landing/src/PX4-Autopilot/Tools/simulation/gz/models'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '2'), ('ISAACSIM_PATH', '/home/xingmaker/isaac'), ('LD_LIBRARY_PATH', '/home/xingmaker/landing/Fast-Perching/install/pose_utils/lib:/home/xingmaker/vrx_ws/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xingmaker'), ('OLDPWD', '/home/xingmaker/landing/Fast-Perching'), ('LESS', '-R'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ZSH', '/home/xingmaker/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('MANAGERPID', '2000'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('SYSTEMD_EXEC_PID', '2236'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5840'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install:/home/xingmaker/vrx_ws/install'), ('LOGNAME', 'xingmaker'), ('GTK_IM_MODULE', 'fcitx'), ('JOURNAL_STREAM', '8:15801'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ANTHROPIC_BASE_URL', 'https://coding.dashscope.aliyuncs.com/apps/anthropic'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('AUTOJUMP_ERROR_PATH', '/home/xingmaker/.local/share/autojump/errors.log'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/xingmaker/.npm-global/bin:/opt/ros/humble/bin:/home/xingmaker/anaconda3/condabin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/xingmaker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('INVOCATION_ID', 'c2c49c24927b4ba59ff5c6bde18572cd'), ('SESSION_MANAGER', 'local/xingmaker:@/tmp/.ICE-unix/2208,unix/xingmaker:/tmp/.ICE-unix/2208'), ('GDM_LANG', 'zh_CN'), ('PAPERSIZE', 'a4'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_MENU_PREFIX', 'gnome-'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('DISPLAY', ':0'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('IBUS_DISABLE_SNOOPER', '1'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('XAUTHORITY', '/home/xingmaker/.Xauthority'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=fcitx'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/xingmaker'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/xingmaker/anaconda3/bin/python'), ('AMENT_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble'), ('TERMINATOR_UUID', 'urn:uuid:919709a8-3262-4cb7-b085-b6a5e8374c33'), ('LC_NAME', 'zh_CN.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('ANTHROPIC_AUTH_TOKEN', 'sk-sp-c47a899b2fd645c5bc0d4c51d595d86e'), ('GDMSESSION', 'ubuntu'), ('QT_ACCESSIBILITY', '1'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('CLAUDECODE', '1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/xingmaker/landing/Fast-Perching/build/vis_utils'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/xingmaker/anaconda3/bin/conda'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('AUTOJUMP_SOURCED', '1'), ('PYTHONPATH', '/home/xingmaker/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble')]), 'shell': False}
+[0.063310] (vis_utils) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[0.064104] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/include\n'}
+[0.064198] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/include/vis_utils\n'}
+[0.064272] (vis_utils) StdoutLine: {'line': b'-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/include/vis_utils/vis_utils.hpp\n'}
+[0.064347] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/ament_index/resource_index/package_run_dependencies/vis_utils\n'}
+[0.064432] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/ament_index/resource_index/parent_prefix_path/vis_utils\n'}
+[0.064500] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/ament_prefix_path.sh\n'}
+[0.064568] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/ament_prefix_path.dsv\n'}
+[0.064727] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/path.sh\n'}
+[0.064785] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/path.dsv\n'}
+[0.064841] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.bash\n'}
+[0.064896] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.sh\n'}
+[0.064951] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.zsh\n'}
+[0.065004] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.dsv\n'}
+[0.065059] (vis_utils) StdoutLine: {'line': b'-- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/package.dsv\n'}
+[0.065113] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/ament_index/resource_index/packages/vis_utils\n'}
+[0.065168] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.065220] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.065271] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/vis_utilsConfig.cmake\n'}
+[0.065321] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/vis_utilsConfig-version.cmake\n'}
+[0.065382] (vis_utils) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/package.xml\n'}
+[0.065991] (vis_utils) CommandEnded: {'returncode': 0}
+[0.085824] (vis_utils) JobEnded: {'identifier': 'vis_utils', 'rc': 0}
+[0.086146] (planning) JobStarted: {'identifier': 'planning'}
+[0.091161] (planning) JobProgress: {'identifier': 'planning', 'progress': 'cmake'}
+[0.091971] (planning) JobProgress: {'identifier': 'planning', 'progress': 'build'}
+[0.092383] (planning) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xingmaker/landing/Fast-Perching/build/planning', '--', '-j20', '-l20'], 'cwd': '/home/xingmaker/landing/Fast-Perching/build/planning', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/xingmaker/vrx_ws/install/lib:/home/xingmaker/project_px4_landing/src/PX4-Autopilot/build/px4_sitl_default/src/modules/simulation/gz_plugins'), ('ANTHROPIC_MODEL', 'kimi-k2.5'), ('USER', 'xingmaker'), ('LANGUAGE', 'zh_CN:en'), ('LC_TIME', 'zh_CN.UTF-8'), ('GZ_SIM_RESOURCE_PATH', '/home/xingmaker/vrx_ws/install/share/wamv_description/models:/home/xingmaker/vrx_ws/install/share/vrx_gz/models/tmp:/home/xingmaker/vrx_ws/install/share/vrx_gz/models:/home/xingmaker/vrx_ws/install/share/vrx_gz/worlds/2023_practice:/home/xingmaker/vrx_ws/install/share/vrx_gz/worlds:/home/xingmaker/vrx_ws/install/share/vrx_gazebo/models:/home/xingmaker/vrx_ws/install/share/:/home/xingmaker/project_px4_landing/src/PX4-Autopilot/Tools/simulation/gz/models'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '2'), ('ISAACSIM_PATH', '/home/xingmaker/isaac'), ('LD_LIBRARY_PATH', '/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:/home/xingmaker/landing/Fast-Perching/install/pose_utils/lib:/home/xingmaker/vrx_ws/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xingmaker'), ('OLDPWD', '/home/xingmaker/landing/Fast-Perching'), ('LESS', '-R'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ZSH', '/home/xingmaker/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('MANAGERPID', '2000'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('SYSTEMD_EXEC_PID', '2236'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5840'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install:/home/xingmaker/vrx_ws/install'), ('LOGNAME', 'xingmaker'), ('GTK_IM_MODULE', 'fcitx'), ('JOURNAL_STREAM', '8:15801'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ANTHROPIC_BASE_URL', 'https://coding.dashscope.aliyuncs.com/apps/anthropic'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('AUTOJUMP_ERROR_PATH', '/home/xingmaker/.local/share/autojump/errors.log'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/xingmaker/.npm-global/bin:/opt/ros/humble/bin:/home/xingmaker/anaconda3/condabin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/xingmaker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('INVOCATION_ID', 'c2c49c24927b4ba59ff5c6bde18572cd'), ('SESSION_MANAGER', 'local/xingmaker:@/tmp/.ICE-unix/2208,unix/xingmaker:/tmp/.ICE-unix/2208'), ('GDM_LANG', 'zh_CN'), ('PAPERSIZE', 'a4'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_MENU_PREFIX', 'gnome-'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('DISPLAY', ':0'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('IBUS_DISABLE_SNOOPER', '1'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('XAUTHORITY', '/home/xingmaker/.Xauthority'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=fcitx'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/xingmaker'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/xingmaker/anaconda3/bin/python'), ('AMENT_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble'), ('TERMINATOR_UUID', 'urn:uuid:919709a8-3262-4cb7-b085-b6a5e8374c33'), ('LC_NAME', 'zh_CN.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('ANTHROPIC_AUTH_TOKEN', 'sk-sp-c47a899b2fd645c5bc0d4c51d595d86e'), ('GDMSESSION', 'ubuntu'), ('QT_ACCESSIBILITY', '1'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('CLAUDECODE', '1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/xingmaker/landing/Fast-Perching/build/planning'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/xingmaker/anaconda3/bin/conda'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('AUTOJUMP_SOURCED', '1'), ('PYTHONPATH', '/home/xingmaker/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble')]), 'shell': False}
+[0.099735] (-) TimerEvent: {}
+[0.154898] (planning) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target planning\n'}
+[0.158524] (planning) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target planning_node\n'}
+[0.167645] (planning) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/planning.dir/src/planning_node.cpp.o\n'}
+[0.172238] (planning) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/planning_node.dir/src/planning_node.cpp.o\n'}
+[0.199875] (-) TimerEvent: {}
+[0.300013] (-) TimerEvent: {}
+[0.400236] (-) TimerEvent: {}
+[0.500412] (-) TimerEvent: {}
+[0.600639] (-) TimerEvent: {}
+[0.700782] (-) TimerEvent: {}
+[0.800924] (-) TimerEvent: {}
+[0.901153] (-) TimerEvent: {}
+[1.001391] (-) TimerEvent: {}
+[1.101546] (-) TimerEvent: {}
+[1.201691] (-) TimerEvent: {}
+[1.301831] (-) TimerEvent: {}
+[1.401970] (-) TimerEvent: {}
+[1.502192] (-) TimerEvent: {}
+[1.602429] (-) TimerEvent: {}
+[1.702574] (-) TimerEvent: {}
+[1.802807] (-) TimerEvent: {}
+[1.903038] (-) TimerEvent: {}
+[2.003274] (-) TimerEvent: {}
+[2.103412] (-) TimerEvent: {}
+[2.203642] (-) TimerEvent: {}
+[2.303882] (-) TimerEvent: {}
+[2.404087] (-) TimerEvent: {}
+[2.504318] (-) TimerEvent: {}
+[2.604557] (-) TimerEvent: {}
+[2.704815] (-) TimerEvent: {}
+[2.805008] (-) TimerEvent: {}
+[2.905182] (-) TimerEvent: {}
+[3.005429] (-) TimerEvent: {}
+[3.105579] (-) TimerEvent: {}
+[3.205724] (-) TimerEvent: {}
+[3.305887] (-) TimerEvent: {}
+[3.406030] (-) TimerEvent: {}
+[3.506233] (-) TimerEvent: {}
+[3.606476] (-) TimerEvent: {}
+[3.706626] (-) TimerEvent: {}
+[3.806772] (-) TimerEvent: {}
+[3.907001] (-) TimerEvent: {}
+[4.007145] (-) TimerEvent: {}
+[4.107319] (-) TimerEvent: {}
+[4.207454] (-) TimerEvent: {}
+[4.307618] (-) TimerEvent: {}
+[4.407782] (-) TimerEvent: {}
+[4.507925] (-) TimerEvent: {}
+[4.608149] (-) TimerEvent: {}
+[4.708318] (-) TimerEvent: {}
+[4.808432] (-) TimerEvent: {}
+[4.908562] (-) TimerEvent: {}
+[5.008692] (-) TimerEvent: {}
+[5.108832] (-) TimerEvent: {}
+[5.208946] (-) TimerEvent: {}
+[5.309062] (-) TimerEvent: {}
+[5.409295] (-) TimerEvent: {}
+[5.509412] (-) TimerEvent: {}
+[5.609558] (-) TimerEvent: {}
+[5.709699] (-) TimerEvent: {}
+[5.809840] (-) TimerEvent: {}
+[5.909983] (-) TimerEvent: {}
+[6.010118] (-) TimerEvent: {}
+[6.110276] (-) TimerEvent: {}
+[6.210411] (-) TimerEvent: {}
+[6.310548] (-) TimerEvent: {}
+[6.410689] (-) TimerEvent: {}
+[6.510831] (-) TimerEvent: {}
+[6.611016] (-) TimerEvent: {}
+[6.711202] (-) TimerEvent: {}
+[6.811432] (-) TimerEvent: {}
+[6.911659] (-) TimerEvent: {}
+[7.011878] (-) TimerEvent: {}
+[7.112111] (-) TimerEvent: {}
+[7.212313] (-) TimerEvent: {}
+[7.312478] (-) TimerEvent: {}
+[7.412708] (-) TimerEvent: {}
+[7.512853] (-) TimerEvent: {}
+[7.613083] (-) TimerEvent: {}
+[7.713309] (-) TimerEvent: {}
+[7.813541] (-) TimerEvent: {}
+[7.913686] (-) TimerEvent: {}
+[8.013924] (-) TimerEvent: {}
+[8.114149] (-) TimerEvent: {}
+[8.214316] (-) TimerEvent: {}
+[8.314452] (-) TimerEvent: {}
+[8.414598] (-) TimerEvent: {}
+[8.514747] (-) TimerEvent: {}
+[8.614893] (-) TimerEvent: {}
+[8.715022] (-) TimerEvent: {}
+[8.815159] (-) TimerEvent: {}
+[8.915293] (-) TimerEvent: {}
+[9.015458] (-) TimerEvent: {}
+[9.115587] (-) TimerEvent: {}
+[9.215726] (-) TimerEvent: {}
+[9.315866] (-) TimerEvent: {}
+[9.416007] (-) TimerEvent: {}
+[9.516148] (-) TimerEvent: {}
+[9.616290] (-) TimerEvent: {}
+[9.716446] (-) TimerEvent: {}
+[9.816586] (-) TimerEvent: {}
+[9.916727] (-) TimerEvent: {}
+[10.016869] (-) TimerEvent: {}
+[10.117009] (-) TimerEvent: {}
+[10.217172] (-) TimerEvent: {}
+[10.317321] (-) TimerEvent: {}
+[10.417435] (-) TimerEvent: {}
+[10.517569] (-) TimerEvent: {}
+[10.617710] (-) TimerEvent: {}
+[10.717835] (-) TimerEvent: {}
+[10.817966] (-) TimerEvent: {}
+[10.918191] (-) TimerEvent: {}
+[11.018421] (-) TimerEvent: {}
+[11.118656] (-) TimerEvent: {}
+[11.218884] (-) TimerEvent: {}
+[11.319061] (-) TimerEvent: {}
+[11.419290] (-) TimerEvent: {}
+[11.519501] (-) TimerEvent: {}
+[11.619642] (-) TimerEvent: {}
+[11.719781] (-) TimerEvent: {}
+[11.819973] (-) TimerEvent: {}
+[11.920160] (-) TimerEvent: {}
+[12.020302] (-) TimerEvent: {}
+[12.120438] (-) TimerEvent: {}
+[12.220593] (-) TimerEvent: {}
+[12.320751] (-) TimerEvent: {}
+[12.420910] (-) TimerEvent: {}
+[12.521070] (-) TimerEvent: {}
+[12.621225] (-) TimerEvent: {}
+[12.721397] (-) TimerEvent: {}
+[12.821562] (-) TimerEvent: {}
+[12.921699] (-) TimerEvent: {}
+[13.021836] (-) TimerEvent: {}
+[13.122017] (-) TimerEvent: {}
+[13.222149] (-) TimerEvent: {}
+[13.322372] (-) TimerEvent: {}
+[13.422535] (-) TimerEvent: {}
+[13.522669] (-) TimerEvent: {}
+[13.622813] (-) TimerEvent: {}
+[13.722952] (-) TimerEvent: {}
+[13.823094] (-) TimerEvent: {}
+[13.923255] (-) TimerEvent: {}
+[14.023418] (-) TimerEvent: {}
+[14.123576] (-) TimerEvent: {}
+[14.223735] (-) TimerEvent: {}
+[14.323890] (-) TimerEvent: {}
+[14.424052] (-) TimerEvent: {}
+[14.524212] (-) TimerEvent: {}
+[14.624379] (-) TimerEvent: {}
+[14.724537] (-) TimerEvent: {}
+[14.824696] (-) TimerEvent: {}
+[14.924861] (-) TimerEvent: {}
+[15.025015] (-) TimerEvent: {}
+[15.125170] (-) TimerEvent: {}
+[15.225331] (-) TimerEvent: {}
+[15.325494] (-) TimerEvent: {}
+[15.425657] (-) TimerEvent: {}
+[15.525812] (-) TimerEvent: {}
+[15.625955] (-) TimerEvent: {}
+[15.668199] (planning) StdoutLine: {'line': b'[ 75%] Linking CXX shared library libplanning.so\n'}
+[15.726042] (-) TimerEvent: {}
+[15.788225] (planning) StdoutLine: {'line': b'[100%] Linking CXX executable planning_node\n'}
+[15.826145] (-) TimerEvent: {}
+[15.903231] (planning) StdoutLine: {'line': b'[100%] Built target planning\n'}
+[15.926241] (-) TimerEvent: {}
+[16.013701] (planning) StdoutLine: {'line': b'[100%] Built target planning_node\n'}
+[16.020115] (planning) CommandEnded: {'returncode': 0}
+[16.020497] (planning) JobProgress: {'identifier': 'planning', 'progress': 'install'}
+[16.020799] (planning) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/xingmaker/landing/Fast-Perching/build/planning'], 'cwd': '/home/xingmaker/landing/Fast-Perching/build/planning', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/xingmaker/vrx_ws/install/lib:/home/xingmaker/project_px4_landing/src/PX4-Autopilot/build/px4_sitl_default/src/modules/simulation/gz_plugins'), ('ANTHROPIC_MODEL', 'kimi-k2.5'), ('USER', 'xingmaker'), ('LANGUAGE', 'zh_CN:en'), ('LC_TIME', 'zh_CN.UTF-8'), ('GZ_SIM_RESOURCE_PATH', '/home/xingmaker/vrx_ws/install/share/wamv_description/models:/home/xingmaker/vrx_ws/install/share/vrx_gz/models/tmp:/home/xingmaker/vrx_ws/install/share/vrx_gz/models:/home/xingmaker/vrx_ws/install/share/vrx_gz/worlds/2023_practice:/home/xingmaker/vrx_ws/install/share/vrx_gz/worlds:/home/xingmaker/vrx_ws/install/share/vrx_gazebo/models:/home/xingmaker/vrx_ws/install/share/:/home/xingmaker/project_px4_landing/src/PX4-Autopilot/Tools/simulation/gz/models'), ('CLAUDE_CODE_ENTRYPOINT', 'cli'), ('GIT_EDITOR', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '2'), ('ISAACSIM_PATH', '/home/xingmaker/isaac'), ('LD_LIBRARY_PATH', '/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:/home/xingmaker/landing/Fast-Perching/install/pose_utils/lib:/home/xingmaker/vrx_ws/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xingmaker'), ('OLDPWD', '/home/xingmaker/landing/Fast-Perching'), ('LESS', '-R'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ZSH', '/home/xingmaker/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('MANAGERPID', '2000'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('SYSTEMD_EXEC_PID', '2236'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5840'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install:/home/xingmaker/vrx_ws/install'), ('LOGNAME', 'xingmaker'), ('GTK_IM_MODULE', 'fcitx'), ('JOURNAL_STREAM', '8:15801'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ANTHROPIC_BASE_URL', 'https://coding.dashscope.aliyuncs.com/apps/anthropic'), ('OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE', 'delta'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('AUTOJUMP_ERROR_PATH', '/home/xingmaker/.local/share/autojump/errors.log'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/xingmaker/.npm-global/bin:/opt/ros/humble/bin:/home/xingmaker/anaconda3/condabin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/xingmaker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('INVOCATION_ID', 'c2c49c24927b4ba59ff5c6bde18572cd'), ('SESSION_MANAGER', 'local/xingmaker:@/tmp/.ICE-unix/2208,unix/xingmaker:/tmp/.ICE-unix/2208'), ('GDM_LANG', 'zh_CN'), ('PAPERSIZE', 'a4'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_MENU_PREFIX', 'gnome-'), ('COREPACK_ENABLE_AUTO_PIN', '0'), ('DISPLAY', ':0'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'zh_CN.UTF-8'), ('IBUS_DISABLE_SNOOPER', '1'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('NoDefaultCurrentDirectoryInExePath', '1'), ('XAUTHORITY', '/home/xingmaker/.Xauthority'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=fcitx'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/xingmaker'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/xingmaker/anaconda3/bin/python'), ('AMENT_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble'), ('TERMINATOR_UUID', 'urn:uuid:919709a8-3262-4cb7-b085-b6a5e8374c33'), ('LC_NAME', 'zh_CN.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('ANTHROPIC_AUTH_TOKEN', 'sk-sp-c47a899b2fd645c5bc0d4c51d595d86e'), ('GDMSESSION', 'ubuntu'), ('QT_ACCESSIBILITY', '1'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('CLAUDECODE', '1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/xingmaker/landing/Fast-Perching/build/planning'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/xingmaker/anaconda3/bin/conda'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('AUTOJUMP_SOURCED', '1'), ('PYTHONPATH', '/home/xingmaker/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble')]), 'shell': False}
+[16.026309] (-) TimerEvent: {}
+[16.026512] (planning) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[16.026621] (planning) StdoutLine: {'line': b'-- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/lib/planning/planning_node\n'}
+[16.027488] (planning) StdoutLine: {'line': b'-- Set runtime path of "/home/xingmaker/landing/Fast-Perching/install/planning/lib/planning/planning_node" to ""\n'}
+[16.027569] (planning) StdoutLine: {'line': b'-- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/lib/libplanning.so\n'}
+[16.028652] (planning) StdoutLine: {'line': b'-- Set runtime path of "/home/xingmaker/landing/Fast-Perching/install/planning/lib/libplanning.so" to ""\n'}
+[16.028693] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/launch\n'}
+[16.028786] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/launch/perching.launch.py\n'}
+[16.028820] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/config\n'}
+[16.028851] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/config/rviz_sim.rviz\n'}
+[16.028881] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/package_run_dependencies/planning\n'}
+[16.028927] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/parent_prefix_path/planning\n'}
+[16.028960] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/ament_prefix_path.sh\n'}
+[16.028993] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/ament_prefix_path.dsv\n'}
+[16.029093] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/path.sh\n'}
+[16.029128] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/path.dsv\n'}
+[16.029157] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.bash\n'}
+[16.029190] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.sh\n'}
+[16.029217] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.zsh\n'}
+[16.029244] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.dsv\n'}
+[16.029273] (planning) StdoutLine: {'line': b'-- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/package.dsv\n'}
+[16.029301] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/packages/planning\n'}
+[16.029329] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/rclcpp_components/planning\n'}
+[16.029357] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/cmake/planningConfig.cmake\n'}
+[16.029412] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/cmake/planningConfig-version.cmake\n'}
+[16.029445] (planning) StdoutLine: {'line': b'-- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/package.xml\n'}
+[16.029993] (planning) CommandEnded: {'returncode': 0}
+[16.045941] (planning) JobEnded: {'identifier': 'planning', 'rc': 0}
+[16.046299] (-) EventReactorShutdown: {}

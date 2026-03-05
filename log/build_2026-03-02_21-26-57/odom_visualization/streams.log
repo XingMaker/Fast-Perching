@@ -1,0 +1,28 @@
+[0.006s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/odom_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/odom_visualization -- -j20 -l20
+[0.036s] [ 50%] Built target odom_visualization_plate
+[0.039s] [100%] Built target odom_visualization
+[0.051s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/odom_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/odom_visualization -- -j20 -l20
+[0.052s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/odom_visualization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/odom_visualization
+[0.057s] -- Install configuration: "Release"
+[0.057s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/lib/odom_visualization/odom_visualization
+[0.058s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/lib/odom_visualization/odom_visualization_plate
+[0.058s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch/vins_vis.launch
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch/sim_vis.launch
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/launch/real_vis.launch
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/ament_index/resource_index/package_run_dependencies/odom_visualization
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/ament_index/resource_index/parent_prefix_path/odom_visualization
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/ament_prefix_path.sh
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/ament_prefix_path.dsv
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/path.sh
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/environment/path.dsv
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.bash
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.sh
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.zsh
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/local_setup.dsv
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/package.dsv
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/ament_index/resource_index/packages/odom_visualization
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/cmake/odom_visualizationConfig.cmake
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/cmake/odom_visualizationConfig-version.cmake
+[0.059s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/odom_visualization/share/odom_visualization/package.xml
+[0.066s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/odom_visualization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/odom_visualization

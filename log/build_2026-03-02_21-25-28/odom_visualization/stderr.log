@@ -1,0 +1,5 @@
+/usr/bin/ld: 找不到 -ln: 没有那个文件或目录
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/odom_visualization_plate.dir/build.make:222：odom_visualization_plate] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/odom_visualization_plate.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

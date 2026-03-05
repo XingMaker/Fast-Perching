@@ -1,0 +1,44 @@
+[ 25%] Building CXX object CMakeFiles/odom_visualization_plate.dir/src/odom_visualization_plate.cpp.o
+[ 50%] Building CXX object CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o
+/home/xingmaker/landing/Fast-Perching/src/odom_vis/odom_visualization/src/odom_visualization_plate.cpp:5:10: fatal error: Eigen/Geometry: 没有那个文件或目录
+    5 | #include <Eigen/Geometry>
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [CMakeFiles/odom_visualization_plate.dir/build.make:76：CMakeFiles/odom_visualization_plate.dir/src/odom_visualization_plate.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/odom_visualization_plate.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+[ 75%] Linking CXX executable odom_visualization
+/usr/bin/ld: CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o: in function `void arma::gemv<false, false, false>::apply_blas_type<double, arma::Mat<double> >(double*, arma::Mat<double> const&, double const*, double, double) [clone .isra.0]':
+odom_visualization.cpp:(.text+0x41d): undefined reference to `wrapper2_dgemv_'
+/usr/bin/ld: CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o: in function `void arma::syrk<false, false, false>::apply_blas_type<double, arma::Mat<double> >(arma::Mat<double>&, arma::Mat<double> const&, double, double) [clone .isra.0]':
+odom_visualization.cpp:(.text+0x1454): undefined reference to `wrapper2_dsyrk_'
+/usr/bin/ld: odom_visualization.cpp:(.text+0x1b37): undefined reference to `wrapper2_ddot_'
+/usr/bin/ld: CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o: in function `odom_callback(std::shared_ptr<nav_msgs::msg::Odometry_<std::allocator<void> > >)':
+odom_visualization.cpp:(.text+0x74a7): undefined reference to `wrapper2_dnrm2_'
+/usr/bin/ld: odom_visualization.cpp:(.text+0x7c40): undefined reference to `wrapper2_dsyev_'
+/usr/bin/ld: odom_visualization.cpp:(.text+0x9496): undefined reference to `wrapper2_dsyev_'
+/usr/bin/ld: CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o: in function `void arma::glue_times::apply<double, false, false, false, arma::Mat<double>, arma::Col<double> >(arma::Mat<double>&, arma::Mat<double> const&, arma::Col<double> const&, double) [clone .isra.0]':
+odom_visualization.cpp:(.text.hot+0xec): undefined reference to `wrapper2_dgemv_'
+/usr/bin/ld: odom_visualization.cpp:(.text.hot+0x1eb): undefined reference to `wrapper2_dgemv_'
+/usr/bin/ld: CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o: in function `void arma::glue_times::apply<double, true, false, false, arma::Mat<double>, arma::Col<double> >(arma::Mat<double>&, arma::Mat<double> const&, arma::Col<double> const&, double) [clone .isra.0]':
+odom_visualization.cpp:(.text.hot+0x2fc): undefined reference to `wrapper2_dgemv_'
+/usr/bin/ld: odom_visualization.cpp:(.text.hot+0x3fb): undefined reference to `wrapper2_dgemv_'
+/usr/bin/ld: CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o: in function `void arma::glue_times::apply<double, false, false, true, false, arma::Mat<double>, arma::Mat<double>, arma::Mat<double> >(arma::Mat<double>&, arma::Mat<double> const&, arma::Mat<double> const&, arma::Mat<double> const&, double) [clone .isra.0]':
+odom_visualization.cpp:(.text.hot+0x5d9): undefined reference to `wrapper2_dgemm_'
+/usr/bin/ld: odom_visualization.cpp:(.text.hot+0x727): undefined reference to `wrapper2_dgemm_'
+/usr/bin/ld: odom_visualization.cpp:(.text.hot+0x9a4): undefined reference to `wrapper2_dgemm_'
+/usr/bin/ld: odom_visualization.cpp:(.text.hot+0xae3): undefined reference to `wrapper2_dgemm_'
+/usr/bin/ld: odom_visualization.cpp:(.text.hot+0xbd6): undefined reference to `wrapper2_dgemv_'
+/usr/bin/ld: odom_visualization.cpp:(.text.hot+0xcae): undefined reference to `wrapper2_dgemv_'
+/usr/bin/ld: CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o: in function `double arma::op_norm::vec_norm_2_direct_std<double>(arma::Mat<double> const&)':
+odom_visualization.cpp:(.text.hot._ZN4arma7op_norm21vec_norm_2_direct_stdIdEET_RKNS_3MatIS2_EE[_ZN4arma7op_norm21vec_norm_2_direct_stdIdEET_RKNS_3MatIS2_EE]+0x1ef): undefined reference to `wrapper2_dnrm2_'
+/usr/bin/ld: CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o: in function `bool arma::op_det::apply_direct<arma::Mat<double> >(arma::Mat<double>::elem_type&, arma::Base<arma::Mat<double>::elem_type, arma::Mat<double> > const&)':
+odom_visualization.cpp:(.text._ZN4arma6op_det12apply_directINS_3MatIdEEEEbRNT_9elem_typeERKNS_4BaseIS5_S4_EE[_ZN4arma6op_det12apply_directINS_3MatIdEEEEbRNT_9elem_typeERKNS_4BaseIS5_S4_EE]+0x33d): undefined reference to `wrapper2_dgetrf_'
+/usr/bin/ld: CMakeFiles/odom_visualization.dir/src/odom_visualization.cpp.o: in function `bool arma::auxlib::eig_sym_dc<double>(arma::Col<double>&, arma::Mat<double>&, arma::Mat<double> const&)':
+odom_visualization.cpp:(.text._ZN4arma6auxlib10eig_sym_dcIdEEbRNS_3ColIT_EERNS_3MatIS3_EERKS7_[_ZN4arma6auxlib10eig_sym_dcIdEEbRNS_3ColIT_EERNS_3MatIS3_EERKS7_]+0x1c5): undefined reference to `wrapper2_dsyevd_'
+/usr/bin/ld: odom_visualization.cpp:(.text._ZN4arma6auxlib10eig_sym_dcIdEEbRNS_3ColIT_EERNS_3MatIS3_EERKS7_[_ZN4arma6auxlib10eig_sym_dcIdEEbRNS_3ColIT_EERNS_3MatIS3_EERKS7_]+0x2a7): undefined reference to `wrapper2_dsyevd_'
+/usr/bin/ld: /home/xingmaker/landing/Fast-Perching/install/pose_utils/lib/libpose_utils.so: undefined reference to `wrapper2_dgesv_'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/odom_visualization.dir/build.make:223：odom_visualization] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:139：CMakeFiles/odom_visualization.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

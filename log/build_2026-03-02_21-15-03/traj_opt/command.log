@@ -1,0 +1,1 @@
+Invoking command in '/home/xingmaker/landing/Fast-Perching/build/traj_opt': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/xingmaker/landing/Fast-Perching/src/traj_opt -DCMAKE_INSTALL_PREFIX=/home/xingmaker/landing/Fast-Perching/install/traj_opt

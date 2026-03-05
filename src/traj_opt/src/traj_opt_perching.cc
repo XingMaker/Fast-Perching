@@ -549,30 +549,51 @@ void TrajOpt::addTimeIntPenalty(double& cost) {
   }
 }
 
-TrajOpt::TrajOpt(ros::NodeHandle& nh) {
-  // nh.getParam("N", N_);
-  nh.getParam("K", K_);
+TrajOpt::TrajOpt(rclcpp::Node::SharedPtr node) : node_(node) {
+  // node_->declare_parameter("N", N_);
+  node_->declare_parameter("K", 16);
+  node_->get_parameter("K", K_);
   // load dynamic paramters
-  nh.getParam("vmax", vmax_);
-  nh.getParam("amax", amax_);
-  nh.getParam("thrust_max", thrust_max_);
-  nh.getParam("thrust_min", thrust_min_);
-  nh.getParam("omega_max", omega_max_);
-  nh.getParam("omega_yaw_max", omega_yaw_max_);
-  nh.getParam("v_plus", v_plus_);
-  nh.getParam("robot_l", robot_l_);
-  nh.getParam("robot_r", robot_r_);
-  nh.getParam("platform_r", platform_r_);
-  nh.getParam("rhoT", rhoT_);
-  nh.getParam("rhoVt", rhoVt_);
-  nh.getParam("rhoP", rhoP_);
-  nh.getParam("rhoV", rhoV_);
-  nh.getParam("rhoA", rhoA_);
-  nh.getParam("rhoThrust", rhoThrust_);
-  nh.getParam("rhoOmega", rhoOmega_);
-  nh.getParam("rhoPerchingCollision", rhoPerchingCollision_);
-  nh.getParam("pause_debug", pause_debug_);
-  visPtr_ = std::make_shared<vis_utils::VisUtils>(nh);
+  node_->declare_parameter("vmax", 6.0);
+  node_->declare_parameter("amax", 6.0);
+  node_->declare_parameter("thrust_max", 17.0);
+  node_->declare_parameter("thrust_min", 5.0);
+  node_->declare_parameter("omega_max", 3.0);
+  node_->declare_parameter("omega_yaw_max", 0.5);
+  node_->declare_parameter("v_plus", 0.3);
+  node_->declare_parameter("robot_l", 0.02);
+  node_->declare_parameter("robot_r", 0.13);
+  node_->declare_parameter("platform_r", 1.0);
+  node_->declare_parameter("rhoT", 100000.0);
+  node_->declare_parameter("rhoVt", 100000.0);
+  node_->declare_parameter("rhoP", 10000000.0);
+  node_->declare_parameter("rhoV", 1000.0);
+  node_->declare_parameter("rhoA", 1000.0);
+  node_->declare_parameter("rhoThrust", 10000.0);
+  node_->declare_parameter("rhoOmega", 100000.0);
+  node_->declare_parameter("rhoPerchingCollision", 1000000.0);
+  node_->declare_parameter("pause_debug", false);
+
+  node_->get_parameter("vmax", vmax_);
+  node_->get_parameter("amax", amax_);
+  node_->get_parameter("thrust_max", thrust_max_);
+  node_->get_parameter("thrust_min", thrust_min_);
+  node_->get_parameter("omega_max", omega_max_);
+  node_->get_parameter("omega_yaw_max", omega_yaw_max_);
+  node_->get_parameter("v_plus", v_plus_);
+  node_->get_parameter("robot_l", robot_l_);
+  node_->get_parameter("robot_r", robot_r_);
+  node_->get_parameter("platform_r", platform_r_);
+  node_->get_parameter("rhoT", rhoT_);
+  node_->get_parameter("rhoVt", rhoVt_);
+  node_->get_parameter("rhoP", rhoP_);
+  node_->get_parameter("rhoV", rhoV_);
+  node_->get_parameter("rhoA", rhoA_);
+  node_->get_parameter("rhoThrust", rhoThrust_);
+  node_->get_parameter("rhoOmega", rhoOmega_);
+  node_->get_parameter("rhoPerchingCollision", rhoPerchingCollision_);
+  node_->get_parameter("pause_debug", pause_debug_);
+  visPtr_ = std::make_shared<vis_utils::VisUtils>(node);
 }
 
 bool TrajOpt::grad_cost_v(const Eigen::Vector3d& v,

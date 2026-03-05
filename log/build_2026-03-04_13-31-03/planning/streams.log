@@ -1,0 +1,31 @@
+[0.007s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/planning': CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/planning:/home/xingmaker/landing/Fast-Perching/install/odom_visualization:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:/home/xingmaker/landing/Fast-Perching/install/planning/lib:/home/xingmaker/landing/Fast-Perching/install/pose_utils/lib:/home/xingmaker/vrx_ws/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/planning -- -j20 -l20
+[0.038s] Consolidate compiler generated dependencies of target planning_node
+[0.042s] Consolidate compiler generated dependencies of target planning
+[0.050s] [ 50%] Built target planning_node
+[0.052s] [100%] Built target planning
+[0.058s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/planning' returned '0': CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/planning:/home/xingmaker/landing/Fast-Perching/install/odom_visualization:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:/home/xingmaker/landing/Fast-Perching/install/planning/lib:/home/xingmaker/landing/Fast-Perching/install/pose_utils/lib:/home/xingmaker/vrx_ws/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/planning -- -j20 -l20
+[0.059s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/planning': CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/planning:/home/xingmaker/landing/Fast-Perching/install/odom_visualization:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:/home/xingmaker/landing/Fast-Perching/install/planning/lib:/home/xingmaker/landing/Fast-Perching/install/pose_utils/lib:/home/xingmaker/vrx_ws/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/planning
+[0.064s] -- Install configuration: "Release"
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/lib/planning/planning_node
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/lib/libplanning.so
+[0.064s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/launch
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/launch/perching.launch.py
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/config
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/config/rviz_sim.rviz
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/package_run_dependencies/planning
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/parent_prefix_path/planning
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/ament_prefix_path.sh
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/ament_prefix_path.dsv
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/path.sh
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/path.dsv
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.bash
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.sh
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.zsh
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.dsv
+[0.065s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/package.dsv
+[0.065s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/packages/planning
+[0.066s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/rclcpp_components/planning
+[0.066s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/cmake/planningConfig.cmake
+[0.066s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/cmake/planningConfig-version.cmake
+[0.066s] -- Up-to-date: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/package.xml
+[0.067s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/planning' returned '0': CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/planning:/home/xingmaker/landing/Fast-Perching/install/odom_visualization:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:/home/xingmaker/landing/Fast-Perching/install/planning/lib:/home/xingmaker/landing/Fast-Perching/install/pose_utils/lib:/home/xingmaker/vrx_ws/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/planning

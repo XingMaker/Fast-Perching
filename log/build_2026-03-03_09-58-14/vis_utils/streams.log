@@ -1,0 +1,109 @@
+[0.005s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/vis_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/xingmaker/landing/Fast-Perching/src/vis_utils -DCMAKE_INSTALL_PREFIX=/home/xingmaker/landing/Fast-Perching/install/vis_utils
+[0.048s] -- The C compiler identification is GNU 11.4.0
+[0.080s] -- The CXX compiler identification is GNU 11.4.0
+[0.084s] -- Detecting C compiler ABI info
+[0.129s] -- Detecting C compiler ABI info - done
+[0.135s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.135s] -- Detecting C compile features
+[0.135s] -- Detecting C compile features - done
+[0.137s] -- Detecting CXX compiler ABI info
+[0.202s] -- Detecting CXX compiler ABI info - done
+[0.207s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.207s] -- Detecting CXX compile features
+[0.207s] -- Detecting CXX compile features - done
+[0.208s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.312s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.359s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[0.382s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.384s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.388s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.393s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.400s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.420s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.421s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.497s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.527s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.561s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.566s] -- Looking for pthread.h
+[0.660s] -- Looking for pthread.h - found
+[0.660s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.755s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.757s] -- Found Threads: TRUE  
+[0.788s] -- Found pcl_ros: 2.4.5 (/opt/ros/humble/share/pcl_ros/cmake)
+[0.826s] -- Checking for module 'eigen3'
+[0.835s] --   Found eigen3, version 3.4.0
+[0.874s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[0.874s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.902s] -- Checking for module 'flann'
+[0.909s] --   Found flann, version 1.9.1
+[0.976s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[0.976s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[1.967s] -- Checking for module 'libusb-1.0'
+[2.001s] --   Found libusb-1.0, version 1.0.25
+[2.068s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[2.068s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.126s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.217s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.220s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.224s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.312s] -- Found Qhull version 8.0.2
+[2.394s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.474s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[2.474s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[2.475s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[2.475s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[2.476s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[2.476s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[2.476s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[2.477s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[2.477s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[2.478s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[2.478s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[2.478s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[2.479s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[2.479s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[2.480s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[2.480s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[2.481s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[2.481s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[2.482s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[2.483s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[2.483s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[2.483s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[2.483s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[2.484s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[2.484s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[2.500s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.501s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.501s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.544s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.552s] -- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+[2.596s] -- Configuring done
+[2.600s] -- Generating done
+[2.601s] -- Build files have been written to: /home/xingmaker/landing/Fast-Perching/build/vis_utils
+[2.611s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/vis_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/xingmaker/landing/Fast-Perching/src/vis_utils -DCMAKE_INSTALL_PREFIX=/home/xingmaker/landing/Fast-Perching/install/vis_utils
+[2.612s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/vis_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/vis_utils -- -j20 -l20
+[2.652s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/vis_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/vis_utils -- -j20 -l20
+[2.662s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/vis_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/vis_utils
+[2.671s] -- Install configuration: "Release"
+[2.671s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/include
+[2.671s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/include/vis_utils
+[2.671s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/include/vis_utils/vis_utils.hpp
+[2.671s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/ament_index/resource_index/package_run_dependencies/vis_utils
+[2.671s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/ament_index/resource_index/parent_prefix_path/vis_utils
+[2.671s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/ament_prefix_path.sh
+[2.671s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/ament_prefix_path.dsv
+[2.671s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/path.sh
+[2.671s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/environment/path.dsv
+[2.671s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.bash
+[2.672s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.sh
+[2.672s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.zsh
+[2.672s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/local_setup.dsv
+[2.672s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/package.dsv
+[2.672s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/ament_index/resource_index/packages/vis_utils
+[2.672s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.672s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.672s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/vis_utilsConfig.cmake
+[2.672s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/cmake/vis_utilsConfig-version.cmake
+[2.672s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/vis_utils/share/vis_utils/package.xml
+[2.673s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/vis_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/vis_utils

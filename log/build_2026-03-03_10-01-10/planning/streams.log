@@ -1,0 +1,120 @@
+[0.007s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/planning': AMENT_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/xingmaker/landing/Fast-Perching/src/planning -DCMAKE_INSTALL_PREFIX=/home/xingmaker/landing/Fast-Perching/install/planning
+[0.055s] -- The C compiler identification is GNU 11.4.0
+[0.126s] -- The CXX compiler identification is GNU 11.4.0
+[0.129s] -- Detecting C compiler ABI info
+[0.200s] -- Detecting C compiler ABI info - done
+[0.208s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.208s] -- Detecting C compile features
+[0.208s] -- Detecting C compile features - done
+[0.210s] -- Detecting CXX compiler ABI info
+[0.293s] -- Detecting CXX compiler ABI info - done
+[0.299s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.299s] -- Detecting CXX compile features
+[0.299s] -- Detecting CXX compile features - done
+[0.301s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.404s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.452s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[0.477s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.480s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.485s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.490s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.498s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.518s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.520s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.578s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.596s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.622s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.629s] -- Looking for pthread.h
+[0.696s] -- Looking for pthread.h - found
+[0.696s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.775s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.776s] -- Found Threads: TRUE  
+[0.802s] -- Found rclcpp_components: 16.0.18 (/opt/ros/humble/share/rclcpp_components/cmake)
+[0.815s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.821s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.829s] -- Found traj_opt: 0.0.0 (/home/xingmaker/landing/Fast-Perching/install/traj_opt/share/traj_opt/cmake)
+[0.867s] -- Checking for module 'eigen3'
+[0.875s] --   Found eigen3, version 3.4.0
+[0.929s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[0.929s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.949s] -- Checking for module 'flann'
+[0.958s] --   Found flann, version 1.9.1
+[1.039s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[1.040s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[2.108s] -- Checking for module 'libusb-1.0'
+[2.133s] --   Found libusb-1.0, version 1.0.25
+[2.219s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[2.221s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.372s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.463s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.468s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.472s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.556s] -- Found Qhull version 8.0.2
+[2.644s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.726s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[2.726s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[2.727s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[2.727s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[2.728s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[2.728s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[2.728s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[2.728s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[2.729s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[2.729s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[2.730s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[2.730s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[2.731s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[2.731s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[2.732s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[2.732s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[2.733s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[2.733s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[2.734s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[2.734s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[2.735s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[2.735s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[2.735s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[2.736s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[2.736s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[2.747s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.747s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.747s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.848s] -- Configuring done
+[2.880s] -- Generating done
+[2.888s] -- Build files have been written to: /home/xingmaker/landing/Fast-Perching/build/planning
+[2.897s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/planning' returned '0': AMENT_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/xingmaker/landing/Fast-Perching/src/planning -DCMAKE_INSTALL_PREFIX=/home/xingmaker/landing/Fast-Perching/install/planning
+[2.899s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/planning': AMENT_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/planning -- -j20 -l20
+[2.934s] [ 25%] Building CXX object CMakeFiles/planning.dir/src/planning_node.cpp.o
+[2.935s] [ 50%] Building CXX object CMakeFiles/planning_node.dir/src/planning_node.cpp.o
+[18.556s] [ 75%] Linking CXX executable planning_node
+[18.612s] [100%] Linking CXX shared library libplanning.so
+[18.788s] [100%] Built target planning_node
+[18.841s] [100%] Built target planning
+[18.848s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/planning' returned '0': AMENT_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/xingmaker/landing/Fast-Perching/build/planning -- -j20 -l20
+[18.855s] Invoking command in '/home/xingmaker/landing/Fast-Perching/build/planning': AMENT_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/planning
+[18.862s] -- Install configuration: "Release"
+[18.862s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/lib/planning/planning_node
+[18.863s] -- Set runtime path of "/home/xingmaker/landing/Fast-Perching/install/planning/lib/planning/planning_node" to ""
+[18.863s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/lib/libplanning.so
+[18.864s] -- Set runtime path of "/home/xingmaker/landing/Fast-Perching/install/planning/lib/libplanning.so" to ""
+[18.864s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/launch
+[18.864s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/launch/perching.launch.py
+[18.864s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/config
+[18.864s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/config/rviz_sim.rviz
+[18.864s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/package_run_dependencies/planning
+[18.864s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/parent_prefix_path/planning
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/ament_prefix_path.sh
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/ament_prefix_path.dsv
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/path.sh
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/environment/path.dsv
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.bash
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.sh
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.zsh
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/local_setup.dsv
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/package.dsv
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/packages/planning
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/ament_index/resource_index/rclcpp_components/planning
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/cmake/planningConfig.cmake
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/cmake/planningConfig-version.cmake
+[18.865s] -- Installing: /home/xingmaker/landing/Fast-Perching/install/planning/share/planning/package.xml
+[18.866s] Invoked command in '/home/xingmaker/landing/Fast-Perching/build/planning' returned '0': AMENT_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt:/home/xingmaker/landing/Fast-Perching/install/vis_utils:/home/xingmaker/landing/Fast-Perching/install/pose_utils:/home/xingmaker/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/xingmaker/landing/Fast-Perching/install/traj_opt/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/xingmaker/landing/Fast-Perching/build/planning
