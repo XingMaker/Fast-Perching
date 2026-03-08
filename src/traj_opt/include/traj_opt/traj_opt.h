@@ -1,5 +1,5 @@
 #pragma once
-#include <ros/ros.h>
+#include <rclcpp/rclcpp.hpp>
 
 #include <chrono>
 #include <thread>
@@ -11,7 +11,7 @@ namespace traj_opt {
 
 class TrajOpt {
  public:
-  ros::NodeHandle nh_;
+  rclcpp::Node::SharedPtr node_;
   std::shared_ptr<vis_utils::VisUtils> visPtr_;
   bool pause_debug_ = false;
   // # pieces and # key points
@@ -40,7 +40,7 @@ class TrajOpt {
   std::vector<double> tracking_thetas_;
 
  public:
-  TrajOpt(ros::NodeHandle& nh);
+  TrajOpt(rclcpp::Node::SharedPtr node);
   ~TrajOpt() {}
 
   int optimize(const double& delta = 1e-4);

@@ -1,16 +1,21 @@
 #pragma once
-#include <nav_msgs/Path.h>
+
+#include <nav_msgs/msg/path.hpp>
 #include <pcl_conversions/pcl_conversions.h>
-#include <ros/ros.h>
-#include <sensor_msgs/PointCloud2.h>
-#include <visualization_msgs/MarkerArray.h>
+#include <rclcpp/rclcpp.hpp>
+#include <sensor_msgs/msg/point_cloud2.hpp>
+#include <visualization_msgs/msg/marker.hpp>
+#include <visualization_msgs/msg/marker_array.hpp>
 
 #include <Eigen/Geometry>
 #include <iostream>
 #include <unordered_map>
+#include <memory>
 
 namespace vis_utils {
-using PublisherMap = std::unordered_map<std::string, ros::Publisher>;
+
+using PublisherMap = std::unordered_map<std::string, rclcpp::PublisherBase::SharedPtr>;
+
 enum Color { white,
              red,
              green,
@@ -20,10 +25,10 @@ enum Color { white,
 
 class VisUtils {
  private:
-  ros::NodeHandle nh_;
+  rclcpp::Node::SharedPtr node_;
   PublisherMap publisher_map_;
 
-  void setMarkerColor(visualization_msgs::Marker& marker,
+  void setMarkerColor(visualization_msgs::msg::Marker& marker,
                       Color color = blue,
                       double a = 1) {
     marker.color.a = a;
@@ -61,7 +66,7 @@ class VisUtils {
     }
   }
 
-  void setMarkerColor(visualization_msgs::Marker& marker,
+  void setMarkerColor(visualization_msgs::msg::Marker& marker,
                       double a,
                       double r,
                       double g,
@@ -72,7 +77,7 @@ class VisUtils {
     marker.color.b = b;
   }
 
-  void setMarkerScale(visualization_msgs::Marker& marker,
+  void setMarkerScale(visualization_msgs::msg::Marker& marker,
                       const double& x,
                       const double& y,
                       const double& z) {
@@ -81,7 +86,7 @@ class VisUtils {
     marker.scale.z = z;
   }
 
-  void setMarkerPose(visualization_msgs::Marker& marker,
+  void setMarkerPose(visualization_msgs::msg::Marker& marker,
                      const double& x,
                      const double& y,
                      const double& z) {
@@ -93,8 +98,9 @@ class VisUtils {
     marker.pose.orientation.y = 0;
     marker.pose.orientation.z = 0;
   }
+
   template <class ROTATION>
-  void setMarkerPose(visualization_msgs::Marker& marker,
+  void setMarkerPose(visualization_msgs::msg::Marker& marker,
                      const double& x,
                      const double& y,
                      const double& z,
@@ -110,7 +116,7 @@ class VisUtils {
   }
 
  public:
-  VisUtils(ros::NodeHandle& nh) : nh_(nh) {}
+  VisUtils(rclcpp::Node::SharedPtr node) : node_(node) {}
 
   template <class CENTER, class TOPIC>
   void visualize_a_ball(const CENTER& c,
@@ -120,48 +126,52 @@ class VisUtils {
                         const double a = 1) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub = nh_.advertise<visualization_msgs::Marker>(topic, 10);
+      auto pub = node_->create_publisher<visualization_msgs::msg::Marker>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    visualization_msgs::Marker marker;
+    visualization_msgs::msg::Marker marker;
     marker.header.frame_id = "world";
-    marker.type = visualization_msgs::Marker::SPHERE;
-    marker.action = visualization_msgs::Marker::ADD;
+    marker.type = visualization_msgs::msg::Marker::SPHERE;
+    marker.action = visualization_msgs::msg::Marker::ADD;
     setMarkerColor(marker, color, a);
     setMarkerScale(marker, 2 * r, 2 * r, 2 * r);
     setMarkerPose(marker, c[0], c[1], c[2]);
-    marker.header.stamp = ros::Time::now();
-    publisher_map_[topic].publish(marker);
+    marker.header.stamp = node_->now();
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<visualization_msgs::msg::Marker>>(publisher_map_[topic]);
+    pub->publish(marker);
   }
 
   template <class PC, class TOPIC>
   void visualize_pointcloud(const PC& pc, const TOPIC& topic) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub = nh_.advertise<sensor_msgs::PointCloud2>(topic, 10);
+      auto pub = node_->create_publisher<sensor_msgs::msg::PointCloud2>(topic, 10);
       publisher_map_[topic] = pub;
     }
     pcl::PointCloud<pcl::PointXYZ> point_cloud;
-    sensor_msgs::PointCloud2 point_cloud_msg;
+    sensor_msgs::msg::PointCloud2 point_cloud_msg;
     point_cloud.reserve(pc.size());
     for (const auto& pt : pc) {
       point_cloud.points.emplace_back(pt[0], pt[1], pt[2]);
     }
     pcl::toROSMsg(point_cloud, point_cloud_msg);
     point_cloud_msg.header.frame_id = "world";
-    point_cloud_msg.header.stamp = ros::Time::now();
-    publisher_map_[topic].publish(point_cloud_msg);
+    point_cloud_msg.header.stamp = node_->now();
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<sensor_msgs::msg::PointCloud2>>(publisher_map_[topic]);
+    pub->publish(point_cloud_msg);
   }
 
   template <class PATH, class TOPIC>
   void visualize_path(const PATH& path, const TOPIC& topic) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub = nh_.advertise<nav_msgs::Path>(topic, 10);
+      auto pub = node_->create_publisher<nav_msgs::msg::Path>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    nav_msgs::Path path_msg;
-    geometry_msgs::PoseStamped tmpPose;
+    nav_msgs::msg::Path path_msg;
+    geometry_msgs::msg::PoseStamped tmpPose;
     tmpPose.header.frame_id = "world";
     for (const auto& pt : path) {
       tmpPose.pose.position.x = pt[0];
@@ -170,8 +180,10 @@ class VisUtils {
       path_msg.poses.push_back(tmpPose);
     }
     path_msg.header.frame_id = "world";
-    path_msg.header.stamp = ros::Time::now();
-    publisher_map_[topic].publish(path_msg);
+    path_msg.header.stamp = node_->now();
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<nav_msgs::msg::Path>>(publisher_map_[topic]);
+    pub->publish(path_msg);
   }
 
   template <class BALLS, class TOPIC>
@@ -181,21 +193,20 @@ class VisUtils {
                        const double a = 0.2) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub =
-          nh_.advertise<visualization_msgs::MarkerArray>(topic, 10);
+      auto pub = node_->create_publisher<visualization_msgs::msg::MarkerArray>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    visualization_msgs::Marker marker;
+    visualization_msgs::msg::Marker marker;
     marker.header.frame_id = "world";
-    marker.type = visualization_msgs::Marker::SPHERE;
-    marker.action = visualization_msgs::Marker::ADD;
+    marker.type = visualization_msgs::msg::Marker::SPHERE;
+    marker.action = visualization_msgs::msg::Marker::ADD;
     marker.id = 0;
     setMarkerColor(marker, color, a);
-    visualization_msgs::MarkerArray marker_array;
+    visualization_msgs::msg::MarkerArray marker_array;
     marker_array.markers.reserve(balls.size() + 1);
-    marker.action = visualization_msgs::Marker::DELETEALL;
+    marker.action = visualization_msgs::msg::Marker::DELETEALL;
     marker_array.markers.push_back(marker);
-    marker.action = visualization_msgs::Marker::ADD;
+    marker.action = visualization_msgs::msg::Marker::ADD;
     for (const auto& ball : balls) {
       setMarkerPose(marker, ball[0], ball[1], ball[2]);
       auto d = 2 * ball.r;
@@ -203,7 +214,9 @@ class VisUtils {
       marker_array.markers.push_back(marker);
       marker.id++;
     }
-    publisher_map_[topic].publish(marker_array);
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<visualization_msgs::msg::MarkerArray>>(publisher_map_[topic]);
+    pub->publish(marker_array);
   }
 
   template <class ELLIPSOID, class TOPIC>
@@ -213,42 +226,42 @@ class VisUtils {
                             const double a = 0.2) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub =
-          nh_.advertise<visualization_msgs::MarkerArray>(topic, 10);
+      auto pub = node_->create_publisher<visualization_msgs::msg::MarkerArray>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    visualization_msgs::Marker marker;
+    visualization_msgs::msg::Marker marker;
     marker.header.frame_id = "world";
-    marker.type = visualization_msgs::Marker::SPHERE;
-    marker.action = visualization_msgs::Marker::ADD;
+    marker.type = visualization_msgs::msg::Marker::SPHERE;
+    marker.action = visualization_msgs::msg::Marker::ADD;
     marker.id = 0;
     setMarkerColor(marker, color, a);
-    visualization_msgs::MarkerArray marker_array;
+    visualization_msgs::msg::MarkerArray marker_array;
     marker_array.markers.reserve(ellipsoids.size() + 1);
-    marker.action = visualization_msgs::Marker::DELETEALL;
+    marker.action = visualization_msgs::msg::Marker::DELETEALL;
     marker_array.markers.push_back(marker);
-    marker.action = visualization_msgs::Marker::ADD;
+    marker.action = visualization_msgs::msg::Marker::ADD;
     for (const auto& e : ellipsoids) {
       setMarkerPose(marker, e.c[0], e.c[1], e.c[2], e.R);
       setMarkerScale(marker, 2 * e.rx, 2 * e.ry, 2 * e.rz);
       marker_array.markers.push_back(marker);
       marker.id++;
     }
-    publisher_map_[topic].publish(marker_array);
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<visualization_msgs::msg::MarkerArray>>(publisher_map_[topic]);
+    pub->publish(marker_array);
   }
 
   template <class PAIRLINE, class TOPIC>
-  // eg for PAIRLINE: std::vector<std::pair<Eigen::Vector3d, Eigen::Vector3d>>
   void visualize_pairline(const PAIRLINE& pairline, const TOPIC& topic) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub = nh_.advertise<visualization_msgs::Marker>(topic, 10);
+      auto pub = node_->create_publisher<visualization_msgs::msg::Marker>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    visualization_msgs::Marker marker;
+    visualization_msgs::msg::Marker marker;
     marker.header.frame_id = "world";
-    marker.type = visualization_msgs::Marker::LINE_LIST;
-    marker.action = visualization_msgs::Marker::ADD;
+    marker.type = visualization_msgs::msg::Marker::LINE_LIST;
+    marker.action = visualization_msgs::msg::Marker::ADD;
     setMarkerPose(marker, 0, 0, 0);
     setMarkerColor(marker, greenblue, 1);
     setMarkerScale(marker, 0.02, 0.02, 0.02);
@@ -261,19 +274,21 @@ class VisUtils {
       marker.points[2 * i + 1].y = pairline[i].second[1];
       marker.points[2 * i + 1].z = pairline[i].second[2];
     }
-    publisher_map_[topic].publish(marker);
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<visualization_msgs::msg::Marker>>(publisher_map_[topic]);
+    pub->publish(marker);
   }
 
   template <class TOPIC>
   void visualize_arrow(const Eigen::Vector3d p0, const Eigen::Vector3d& p1, const TOPIC& topic, const Color& color = blue) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub = nh_.advertise<visualization_msgs::Marker>(topic, 10);
+      auto pub = node_->create_publisher<visualization_msgs::msg::Marker>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    visualization_msgs::Marker arrow_msg;
-    arrow_msg.type = visualization_msgs::Marker::ARROW;
-    arrow_msg.action = visualization_msgs::Marker::ADD;
+    visualization_msgs::msg::Marker arrow_msg;
+    arrow_msg.type = visualization_msgs::msg::Marker::ARROW;
+    arrow_msg.action = visualization_msgs::msg::Marker::ADD;
     arrow_msg.header.frame_id = "world";
     arrow_msg.id = 0;
     arrow_msg.points.resize(2);
@@ -286,10 +301,11 @@ class VisUtils {
     arrow_msg.points[1].x = p1[0];
     arrow_msg.points[1].y = p1[1];
     arrow_msg.points[1].z = p1[2];
-    publisher_map_[topic].publish(arrow_msg);
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<visualization_msgs::msg::Marker>>(publisher_map_[topic]);
+    pub->publish(arrow_msg);
   }
 
-  // v0 -> v1 theta
   template <class TOPIC>
   void visualize_fan_shape_meshes(const std::vector<Eigen::Vector3d>& v0,
                                   const std::vector<Eigen::Vector3d>& v1,
@@ -297,28 +313,27 @@ class VisUtils {
                                   const TOPIC& topic) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub = nh_.advertise<visualization_msgs::Marker>(topic, 10);
+      auto pub = node_->create_publisher<visualization_msgs::msg::Marker>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    visualization_msgs::Marker marker;
-    marker.type = visualization_msgs::Marker::TRIANGLE_LIST;
-    marker.action = visualization_msgs::Marker::ADD;
+    visualization_msgs::msg::Marker marker;
+    marker.type = visualization_msgs::msg::Marker::TRIANGLE_LIST;
+    marker.action = visualization_msgs::msg::Marker::ADD;
     marker.header.frame_id = "world";
     marker.id = 0;
     setMarkerPose(marker, 0, 0, 0);
     setMarkerScale(marker, 1, 1, 1);
     setMarkerColor(marker, green, 0.1);
     int M = v0.size();
-    // int M = 1;
     for (int i = 0; i < M; ++i) {
       Eigen::Vector3d dp = v1[i] - v0[i];
       double theta0 = atan2(dp.y(), dp.x());
       double r = dp.norm();
-      geometry_msgs::Point center;
+      geometry_msgs::msg::Point center;
       center.x = v0[i].x();
       center.y = v0[i].y();
       center.z = v0[i].z();
-      geometry_msgs::Point p = center;
+      geometry_msgs::msg::Point p = center;
       p.x += r * cos(theta0 - thetas[i]);
       p.y += r * sin(theta0 - thetas[i]);
       for (double theta = theta0 - thetas[i] + 0.1; theta < theta0 + thetas[i]; theta += 0.1) {
@@ -330,30 +345,30 @@ class VisUtils {
         marker.points.push_back(p);
       }
     }
-    publisher_map_[topic].publish(marker);
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<visualization_msgs::msg::Marker>>(publisher_map_[topic]);
+    pub->publish(marker);
   }
 
   template <class ARROWS, class TOPIC>
-  // ARROWS: pair<Vector3d, Vector3d>
   void visualize_arrows(const ARROWS& arrows, const TOPIC& topic) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub =
-          nh_.advertise<visualization_msgs::MarkerArray>(topic, 10);
+      auto pub = node_->create_publisher<visualization_msgs::msg::MarkerArray>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    visualization_msgs::Marker clear_previous_msg;
-    clear_previous_msg.action = visualization_msgs::Marker::DELETEALL;
-    visualization_msgs::Marker arrow_msg;
-    arrow_msg.type = visualization_msgs::Marker::ARROW;
-    arrow_msg.action = visualization_msgs::Marker::ADD;
+    visualization_msgs::msg::Marker clear_previous_msg;
+    clear_previous_msg.action = visualization_msgs::msg::Marker::DELETEALL;
+    visualization_msgs::msg::Marker arrow_msg;
+    arrow_msg.type = visualization_msgs::msg::Marker::ARROW;
+    arrow_msg.action = visualization_msgs::msg::Marker::ADD;
     arrow_msg.header.frame_id = "world";
     arrow_msg.id = 0;
     arrow_msg.points.resize(2);
     setMarkerPose(arrow_msg, 0, 0, 0);
     setMarkerScale(arrow_msg, 0.02, 0.05, 0);
     setMarkerColor(arrow_msg, yellow);
-    visualization_msgs::MarkerArray arrow_list_msg;
+    visualization_msgs::msg::MarkerArray arrow_list_msg;
     arrow_list_msg.markers.reserve(1 + arrows.size());
     arrow_list_msg.markers.push_back(clear_previous_msg);
     for (const auto& arrow : arrows) {
@@ -366,11 +381,12 @@ class VisUtils {
       arrow_list_msg.markers.push_back(arrow_msg);
       arrow_msg.id += 1;
     }
-    publisher_map_[topic].publish(arrow_list_msg);
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<visualization_msgs::msg::MarkerArray>>(publisher_map_[topic]);
+    pub->publish(arrow_list_msg);
   }
 
   template <class TRAJ, class TOPIC>
-  // TRAJ:
   void visualize_traj(const TRAJ& traj, const TOPIC& topic) {
     std::vector<Eigen::Vector3d> path;
     auto duration = traj.getTotalDuration();
@@ -386,29 +402,27 @@ class VisUtils {
   }
 
   template <class TRAJLIST, class TOPIC>
-  // TRAJLIST: std::vector<TRAJ>
   void visualize_traj_list(const TRAJLIST& traj_list, const TOPIC& topic) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub =
-          nh_.advertise<visualization_msgs::MarkerArray>(topic, 10);
+      auto pub = node_->create_publisher<visualization_msgs::msg::MarkerArray>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    visualization_msgs::Marker clear_previous_msg;
-    clear_previous_msg.action = visualization_msgs::Marker::DELETEALL;
-    visualization_msgs::Marker path_msg;
-    path_msg.type = visualization_msgs::Marker::LINE_STRIP;
-    path_msg.action = visualization_msgs::Marker::ADD;
+    visualization_msgs::msg::Marker clear_previous_msg;
+    clear_previous_msg.action = visualization_msgs::msg::Marker::DELETEALL;
+    visualization_msgs::msg::Marker path_msg;
+    path_msg.type = visualization_msgs::msg::Marker::LINE_STRIP;
+    path_msg.action = visualization_msgs::msg::Marker::ADD;
     path_msg.header.frame_id = "world";
     path_msg.id = 0;
     setMarkerPose(path_msg, 0, 0, 0);
     setMarkerScale(path_msg, 0.02, 0.05, 0);
-    visualization_msgs::MarkerArray path_list_msg;
+    visualization_msgs::msg::MarkerArray path_list_msg;
     path_list_msg.markers.reserve(1 + traj_list.size());
     path_list_msg.markers.push_back(clear_previous_msg);
     double a_step = 0.8 / traj_list.size();
     double a = 0.1;
-    geometry_msgs::Point p_msg;
+    geometry_msgs::msg::Point p_msg;
     for (const auto& traj : traj_list) {
       setMarkerColor(path_msg, white, a);
       a = a + a_step;
@@ -423,28 +437,28 @@ class VisUtils {
       path_list_msg.markers.push_back(path_msg);
       path_msg.id += 1;
     }
-    publisher_map_[topic].publish(path_list_msg);
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<visualization_msgs::msg::MarkerArray>>(publisher_map_[topic]);
+    pub->publish(path_list_msg);
   }
 
   template <class PATHLIST, class TOPIC>
-  // PATHLIST: std::vector<PATH>
   void visualize_path_list(const PATHLIST& path_list, const TOPIC& topic) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub =
-          nh_.advertise<visualization_msgs::MarkerArray>(topic, 10);
+      auto pub = node_->create_publisher<visualization_msgs::msg::MarkerArray>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    visualization_msgs::Marker clear_previous_msg;
-    clear_previous_msg.action = visualization_msgs::Marker::DELETEALL;
-    visualization_msgs::Marker path_msg;
-    path_msg.type = visualization_msgs::Marker::LINE_STRIP;
-    path_msg.action = visualization_msgs::Marker::ADD;
+    visualization_msgs::msg::Marker clear_previous_msg;
+    clear_previous_msg.action = visualization_msgs::msg::Marker::DELETEALL;
+    visualization_msgs::msg::Marker path_msg;
+    path_msg.type = visualization_msgs::msg::Marker::LINE_STRIP;
+    path_msg.action = visualization_msgs::msg::Marker::ADD;
     path_msg.header.frame_id = "world";
     path_msg.id = 0;
     setMarkerPose(path_msg, 0, 0, 0);
     setMarkerScale(path_msg, 0.02, 0.05, 0);
-    visualization_msgs::MarkerArray path_list_msg;
+    visualization_msgs::msg::MarkerArray path_list_msg;
     path_list_msg.markers.reserve(1 + path_list.size());
     path_list_msg.markers.push_back(clear_previous_msg);
     setMarkerColor(path_msg, greenblue);
@@ -458,17 +472,21 @@ class VisUtils {
       path_list_msg.markers.push_back(path_msg);
       path_msg.id += 1;
     }
-    publisher_map_[topic].publish(path_list_msg);
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<visualization_msgs::msg::MarkerArray>>(publisher_map_[topic]);
+    pub->publish(path_list_msg);
   }
 
   template <class MSG, class TOPIC>
   void pub_msg(const MSG& msg, const TOPIC& topic) {
     auto got = publisher_map_.find(topic);
     if (got == publisher_map_.end()) {
-      ros::Publisher pub = nh_.advertise<MSG>(topic, 10);
+      auto pub = node_->create_publisher<MSG>(topic, 10);
       publisher_map_[topic] = pub;
     }
-    publisher_map_[topic].publish(msg);
+
+    auto pub = std::static_pointer_cast<rclcpp::Publisher<MSG>>(publisher_map_[topic]);
+    pub->publish(msg);
   }
 };
 
