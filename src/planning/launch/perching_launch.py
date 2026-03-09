@@ -76,6 +76,14 @@ def generate_launch_description():
                 {'rhoThrust': 10000.0},
                 {'rhoOmega': 100000.0},
                 {'rhoPerchingCollision': 1000000.0},
+                # Drone initial state
+                {'drone_init_px': 0.0},
+                {'drone_init_py': 0.0},
+                {'drone_init_pz': 2.0},
+                {'drone_init_vx': 0.0},
+                {'drone_init_vy': 0.0},
+                {'drone_init_vz': 0.0},
+                # Target platform initial state
                 {'perching_px': 0.5},
                 {'perching_py': 0.0},
                 {'perching_pz': 2.0},

@@ -30,6 +30,10 @@ class PlanningNode : public rclcpp::Node {
   bool once_ = false;
   bool debug_replan_ = false;
 
+  // Drone initial state
+  Eigen::Vector3d drone_init_p_;
+  Eigen::Vector3d drone_init_v_;
+
   double tracking_dur_, tracking_dist_, tolerance_d_;
   Eigen::Vector3d perching_p_, perching_v_, perching_axis_;
   double perching_theta_;
@@ -62,10 +66,8 @@ class PlanningNode : public rclcpp::Node {
     Eigen::Quaterniond land_q(1, 0, 0, 0);
 
     iniState.setZero();
-    iniState.col(0).x() = 0.0;
-    iniState.col(0).y() = 0.0;
-    iniState.col(0).z() = 2.0;
-    iniState.col(1) = perching_v_;
+    iniState.col(0) = drone_init_p_;
+    iniState.col(1) = drone_init_v_;
     target_p = perching_p_;
     target_v = perching_v_;
     target_q.x() = 0.0;
@@ -206,7 +208,15 @@ class PlanningNode : public rclcpp::Node {
   }
 
   void init() {
-    // Declare parameters
+    // Declare parameters - Drone initial state
+    this->declare_parameter<double>("drone_init_px", 0.0);
+    this->declare_parameter<double>("drone_init_py", 0.0);
+    this->declare_parameter<double>("drone_init_pz", 2.0);
+    this->declare_parameter<double>("drone_init_vx", 0.0);
+    this->declare_parameter<double>("drone_init_vy", 0.0);
+    this->declare_parameter<double>("drone_init_vz", 0.0);
+
+    // Declare parameters - Target platform
     this->declare_parameter<bool>("replan", false);
     this->declare_parameter<double>("perching_px", 0.5);
     this->declare_parameter<double>("perching_py", 0.0);
@@ -220,7 +230,15 @@ class PlanningNode : public rclcpp::Node {
     this->declare_parameter<double>("perching_theta", -1.5708);
     this->declare_parameter<int>("plan_hz", 10);
 
-    // Get parameters
+    // Get parameters - Drone initial state
+    this->get_parameter("drone_init_px", drone_init_p_.x());
+    this->get_parameter("drone_init_py", drone_init_p_.y());
+    this->get_parameter("drone_init_pz", drone_init_p_.z());
+    this->get_parameter("drone_init_vx", drone_init_v_.x());
+    this->get_parameter("drone_init_vy", drone_init_v_.y());
+    this->get_parameter("drone_init_vz", drone_init_v_.z());
+
+    // Get parameters - Target platform
     this->get_parameter("replan", debug_replan_);
     this->get_parameter("perching_px", perching_p_.x());
     this->get_parameter("perching_py", perching_p_.y());
